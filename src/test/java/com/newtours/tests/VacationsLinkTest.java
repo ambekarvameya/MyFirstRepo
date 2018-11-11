@@ -11,35 +11,36 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import static com.newtours.util.CommonMethods.getProperty;
 import com.newtours.pages.HomePage;
-import com.newtours.pages.HotelsPage;
+import com.newtours.pages.VacationsPage;
 import com.qmetry.qaf.automation.ui.WebDriverTestCase;
 import com.qmetry.qaf.automation.util.Validator;
 
-public class HotelsPageTest extends WebDriverTestCase {
-
-	public HotelsPage hotelsPage;
+public class VacationsLinkTest extends WebDriverTestCase {
+	
 	public HomePage homePage;
+	public VacationsPage vacationPage;
 	
 	@BeforeClass
 	public void init()
 	{
 		getDriver().get("/");
 		getDriver().manage().window().maximize();
-		getDriver().manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		getDriver().manage().timeouts().implicitlyWait(3000, TimeUnit.MILLISECONDS);
 	}
 	
 	
-	@Test(description="Verify if hotels page is under construction")
-	public void hotelsPageTest()
+	@Test(description="User should click on vacations link. Vacations page should be under construction")
+	public void vacationsLinkTest()
 	{
-		hotelsPage = new HotelsPage();
 		homePage = new HomePage();
+		vacationPage = new VacationsPage();
 		
-		homePage.clickHotelsLink();
-		Validator.verifyTrue(hotelsPage.getTextUnderConstruction().verifyVisible(), "Text message is not visible", "Text message is visible");
-		Validator.verifyTrue(hotelsPage.getButtonBackToHome().isDisplayed(), "Back to home button is not displayed", "Back to home button is displayed");
-		hotelsPage.clickButtonBackToHome();
+		homePage.clickVacationsLink();
+		Validator.verifyTrue(vacationPage.verifyTextUnderConstruction(), "Page under construction message is not dispalyed", "Page under construction message is displayed");
+		Validator.verifyTrue(vacationPage.verifyButtonBackToHome(), "Back to home button is not displayed", "Back to home button is displayed");
+		vacationPage.clickBackToHomeButton();
 		Validator.verifyThat(getDriver().getCurrentUrl(), Matchers.equalTo(getProperty("backtohomepage.url")));
+		
 	}
 	
 	
@@ -49,5 +50,5 @@ public class HotelsPageTest extends WebDriverTestCase {
 	{
 		getDriver().close();
 	}
-	
+
 }

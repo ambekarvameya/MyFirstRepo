@@ -1,5 +1,7 @@
 package com.newtours.tests;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
 import org.hamcrest.Matchers;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -37,6 +39,7 @@ public class FlightsPageTest extends WebDriverTestCase {
 		Validator.verifyThat("User is on signonpage",getDriver().getCurrentUrl(),Matchers.equalTo(getProperty("signonpage.url")));		
 	}
 	
+	@AfterMethod
 	@AfterTest
 	public void tearDown()
 	{

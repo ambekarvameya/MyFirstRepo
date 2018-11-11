@@ -1,5 +1,8 @@
 package com.newtours.tests;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import static com.newtours.util.CommonMethods.getProperty;
 
 import java.util.concurrent.TimeUnit;
@@ -43,6 +46,7 @@ public class CruiseReservationTest extends WebDriverTestCase {
 	}
 	
 	
+	@AfterMethod
 	@AfterClass
 	public void tearDown()
 	{

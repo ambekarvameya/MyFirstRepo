@@ -1,0 +1,22 @@
+<root>
+	<register>
+		<firstName>Elena</firstName>
+		<lastName>Gilbert</lastName>
+		<phone>1234567890</phone>
+		<email>abc@gmail.ocm</email>
+		<address1>flat-007,Baker Street-202</address1>
+		<address2>West Side</address2>
+		<city>New York</city>
+		<state>New York</state>
+		<postalCode>12345</postalCode>
+		<username>Elena123</username>
+		<password>Elena123</password>
+		<confirmPassword>Elena123</confirmPassword>
+	</register>
+	<register-invalid>
+		<firstName>Elena</firstName>
+		<lastName>Gilbert</lastName>
+		<phone>1rgfgdg54435</phone>
+		<email>abcdcbhb</email>
+	</register-invalid>
+</root>

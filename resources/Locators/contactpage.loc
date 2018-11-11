@@ -1,0 +1,2 @@
+text.underconstruction.vacationspage=xpath=//tbody/tr[3]/td/p/font/b/font[1]
+button.backtohomepage.vacationspage=xpath=//img[contains(@src,'home')]

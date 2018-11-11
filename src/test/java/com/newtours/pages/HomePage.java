@@ -29,6 +29,26 @@ public class HomePage extends WebDriverBaseTestPage<WebDriverTestPage> {
 	@FindBy(locator="link.cruises.homepage")
 	private QAFWebElement linkCruises;
 	
+	@FindBy(locator="link.destinations.homepage")
+	private QAFWebElement linkDestinations;
+	
+	@FindBy(locator="link.vacations.homepage")
+	private QAFWebElement linkVacations;
+	
+	@FindBy(locator="link.support.homepage")
+	private QAFWebElement linkSupport;
+	
+	@FindBy(locator="link.contact.homepage")
+	private QAFWebElement linkContact;
+	
+	@FindBy(locator="link.register.homepage")
+	private QAFWebElement linkRegister;
+	
+	public QAFWebElement getLinkRegister()
+	{
+		return linkRegister;
+	}
+	
 	public QAFWebElement getLinkCruises()
 	{
 		return linkCruises;
@@ -46,7 +66,23 @@ public class HomePage extends WebDriverBaseTestPage<WebDriverTestPage> {
 	}
 
 
+	
 
+	public QAFWebElement getLinkDestinations() {
+		return linkDestinations;
+	}
+
+	public QAFWebElement getLinkVacations() {
+		return linkVacations;
+	}
+
+	public QAFWebElement getLinkSupport() {
+		return linkSupport;
+	}
+
+	public QAFWebElement getLinkContact() {
+		return linkContact;
+	}
 
 	public QAFWebElement getSignOn()
 	{
@@ -93,6 +129,31 @@ public class HomePage extends WebDriverBaseTestPage<WebDriverTestPage> {
 	public void clickSingOnLink()
 	{
 		linkSignOn.click();
+	}
+	
+	public void clickDestinationsLink()
+	{
+		linkDestinations.click();
+	}
+	
+	public void clickVacationsLink()
+	{
+		linkVacations.click();
+	}
+	
+	public void clickSupportLink()
+	{
+		linkSupport.click();
+	}
+	
+	public void clickContactLink()
+	{
+		linkContact.click();
+	}
+	
+	public void clickRegisterLink()
+	{
+		linkRegister.click();
 	}
 
 	@Override

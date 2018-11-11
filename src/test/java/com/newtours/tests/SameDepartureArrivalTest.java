@@ -1,5 +1,7 @@
 package com.newtours.tests;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import static com.newtours.util.CommonMethods.getProperty;
 
 import java.util.Map;

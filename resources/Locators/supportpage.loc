@@ -1,0 +1,2 @@
+text.underconstruction.supportpage=xpath=//tbody/tr[3]/td/p/font/b/font[1]
+button.backtohomepage.supportpage=xpath=//img[contains(@src,'home')]

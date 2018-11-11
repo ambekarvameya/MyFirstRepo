@@ -1,0 +1,2 @@
+text.underconstruction.destinationspage=//tbody/tr[3]/td/p/font/b/font[1]
+button.backtohomepage.destinationspage=//img[contains(@src,'home')]
